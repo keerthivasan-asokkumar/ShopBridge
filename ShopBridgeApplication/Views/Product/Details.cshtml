@@ -1,0 +1,76 @@
+﻿@model ShopBridgeApplication.Models.Product
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2 class="text-info">Product Details</h2>
+<div>
+    <div class="p-4 rounded border">
+        <input type="hidden" asp-for="ProductId" />
+        <div asp-validation-summary="ModelOnly" class="text-danger">
+
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="ProductName" class="form-control"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="ProductName" class="form-control" readonly="readonly" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Description" class="form-control"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Description" class="form-control" height="50" width="200" readonly="readonly"/>
+            </div>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Price" class="form-control"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Price" class="form-control" readonly="readonly" />
+            </div>
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="UnitsAvailable" class="form-control"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="UnitsAvailable" class="form-control" readonly="readonly"/>
+            </div>
+            <span asp-validation-for="UnitsAvailable" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="ProductImage" class="form-control"></label>
+            </div>
+            <div class="custom-file col-2">
+                <div class="col-6">
+                    <img src="~/images/@Model.ProductImage" alt="Image" height="200" width="210" />
+                </div>
+            </div>
+
+        </div>
+        <br />
+        <br />
+        <br /><br /><br /><br /><br /><br />
+        <div class="form-group row">
+            <a asp-action="Index" class="btn btn-success">Back to Product List</a>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
