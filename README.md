@@ -5,7 +5,7 @@
 
 ##### DEVELOPMENT DETAILS
 
-Front end – MVC, HTML, CSS, Jquery, Bootstrap
+Front end – .NET Core MVC, HTML, CSS, Jquery, Bootstrap
 
 Backend – SQL Server
 
